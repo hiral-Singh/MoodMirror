@@ -6,18 +6,34 @@ import { moodMeta } from "../components/MoodCard";
 const Analytics = () => {
   const [entries, setEntries] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [aiReflection, setAiReflection] = useState(null);
+  const [aiLoading, setAiLoading] = useState(true);
+  const [aiError, setAiError] = useState("");
 
   useEffect(() => {
-    const fetchEntries = async () => {
+    const fetchAnalytics = async () => {
       try {
-        const { data } = await api.get("/mood");
-        setEntries(data.entries);
+        const [entriesResult, reflectionResult] = await Promise.allSettled([
+          api.get("/mood"),
+          api.get("/ai/weekly-reflection")
+        ]);
+
+        if (entriesResult.status === "fulfilled") {
+          setEntries(entriesResult.value.data.entries);
+        }
+
+        if (reflectionResult.status === "fulfilled") {
+          setAiReflection(reflectionResult.value.data);
+        } else {
+          setAiError("Unable to prepare AI reflection right now.");
+        }
       } finally {
         setLoading(false);
+        setAiLoading(false);
       }
     };
 
-    fetchEntries();
+    fetchAnalytics();
   }, []);
 
   const stats = useMemo(() => {
@@ -47,6 +63,8 @@ const Analytics = () => {
 
     return { frequency, average, happiestDay, weeklyTrend };
   }, [entries]);
+
+  const weeklyReflection = aiReflection?.reflection?.weeklyReflection;
 
   return (
     <section className="page-container py-10">
@@ -104,6 +122,53 @@ const Analytics = () => {
           </div>
         </>
       )}
+
+      <div className="card mt-8 p-6">
+        <div className="flex flex-col justify-between gap-3 md:flex-row md:items-start">
+          <div>
+            <h2 className="text-xl font-black">Weekly Reflection</h2>
+            <p className="mt-2 text-sm leading-6 text-ink/62">
+              AI reflections only use entries you choose to include.
+            </p>
+          </div>
+          {aiReflection?.selectedEntryCount > 0 && (
+            <span className="rounded-full bg-sage/15 px-4 py-2 text-sm font-bold text-ink">
+              {aiReflection.canGenerate ? "Generated" : "Selected"} from {aiReflection.selectedEntryCount}{" "}
+              {aiReflection.selectedEntryCount === 1 ? "entry" : "entries"}
+            </span>
+          )}
+        </div>
+
+        {aiLoading && <p className="mt-6 text-ink/62">Reading your selected entries with care...</p>}
+        {aiError && <p className="mt-6 rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">{aiError}</p>}
+        {!aiLoading && !aiError && aiReflection?.status === "no_approved_entries" && (
+          <div className="mt-6 rounded-2xl bg-mist p-5 text-ink/70">
+            No reflections yet. Entries marked for AI reflection can help MoodMirror notice emotional patterns over time.
+          </div>
+        )}
+        {!aiLoading && !aiError && aiReflection?.status === "insufficient_context" && (
+          <div className="mt-6 rounded-2xl bg-mist p-5 text-ink/70">
+            <p className="font-bold text-ink">Keep reflecting.</p>
+            <p className="mt-2 leading-7">
+              MoodMirror needs a little more context before meaningful patterns emerge.
+            </p>
+            <p className="mt-3 text-sm text-ink/55">
+              {aiReflection.selectedEntryCount} selected {aiReflection.selectedEntryCount === 1 ? "entry" : "entries"} ·{" "}
+              {aiReflection.totalTextLength} journal characters
+            </p>
+          </div>
+        )}
+        {!aiLoading && !aiError && aiReflection && !aiReflection.status && !aiReflection.reflection && (
+          <div className="mt-6 rounded-2xl bg-mist p-5 text-ink/70">
+            No reflections yet. Entries marked for AI reflection can help MoodMirror notice emotional patterns over time.
+          </div>
+        )}
+        {weeklyReflection && (
+          <div className="mt-6 rounded-2xl bg-mist p-6">
+            <p className="whitespace-pre-line text-[1.02rem] leading-8 text-ink/78">{weeklyReflection}</p>
+          </div>
+        )}
+      </div>
     </section>
   );
 };

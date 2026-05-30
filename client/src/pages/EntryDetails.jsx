@@ -29,6 +29,13 @@ const EntryDetails = () => {
 
   const meta = moodMeta[entry.mood];
 
+  const handleAIConsent = async () => {
+    const { data } = await api.patch(`/mood/${entry._id}`, {
+      allowAIReflection: !entry.allowAIReflection
+    });
+    setEntry(data.entry);
+  };
+
   return (
     <section className="page-container py-10">
       <Link to="/entries" className="font-bold text-ink/62 hover:text-ink">Back to entries</Link>
@@ -46,6 +53,20 @@ const EntryDetails = () => {
             {entry.isFavorite ? "★" : "☆"}
           </p>
         </div>
+        <label className="mt-6 flex cursor-pointer items-start gap-3 rounded-2xl bg-mist p-4 text-sm text-ink/72">
+          <input
+            type="checkbox"
+            checked={Boolean(entry.allowAIReflection)}
+            onChange={handleAIConsent}
+            className="mt-1 h-4 w-4 accent-ink"
+          />
+          <span>
+            <span className="block font-black text-ink">Include this entry in AI reflections</span>
+            <span className="mt-1 block leading-6">
+              AI reflections only use entries you choose to include.
+            </span>
+          </span>
+        </label>
         <div className="mt-8 whitespace-pre-wrap rounded-2xl bg-mist p-6 leading-8 text-ink/78">{entry.journal}</div>
       </article>
     </section>

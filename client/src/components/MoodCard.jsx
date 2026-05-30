@@ -16,7 +16,7 @@ const formatDate = (date) =>
     minute: "2-digit"
   }).format(new Date(date));
 
-const MoodCard = ({ entry, onDelete, onFavorite }) => {
+const MoodCard = ({ entry, onDelete, onFavorite, onAIConsent }) => {
   const meta = moodMeta[entry.mood] || moodMeta.neutral;
   const preview = entry.journal.length > 110 ? `${entry.journal.slice(0, 110)}...` : entry.journal;
 
@@ -39,6 +39,18 @@ const MoodCard = ({ entry, onDelete, onFavorite }) => {
         </button>
       </div>
       <p className="min-h-12 text-sm leading-6 text-ink/75">{preview}</p>
+      <label className="mt-4 flex cursor-pointer items-start gap-3 rounded-2xl bg-mist px-4 py-3 text-sm text-ink/70">
+        <input
+          type="checkbox"
+          checked={Boolean(entry.allowAIReflection)}
+          onChange={() => onAIConsent(entry)}
+          className="mt-1 h-4 w-4 accent-ink"
+        />
+        <span>
+          <span className="block font-bold text-ink">Include in AI reflections</span>
+          <span className="block text-xs leading-5 text-ink/55">Used only when this is turned on.</span>
+        </span>
+      </label>
       <div className="mt-5 flex items-center justify-between gap-3">
         <Link to={`/entries/${entry._id}`} className="btn-secondary px-4 py-2 text-sm">
           View details

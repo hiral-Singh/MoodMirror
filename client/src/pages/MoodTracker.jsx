@@ -9,6 +9,7 @@ const MoodTracker = () => {
   const navigate = useNavigate();
   const [mood, setMood] = useState("okay");
   const [journal, setJournal] = useState("");
+  const [allowAIReflection, setAllowAIReflection] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -18,7 +19,7 @@ const MoodTracker = () => {
     setLoading(true);
 
     try {
-      await api.post("/mood", { mood, journal });
+      await api.post("/mood", { mood, journal, allowAIReflection });
       navigate("/dashboard");
     } catch (err) {
       setError(err.response?.data?.message || "Unable to save mood");
@@ -61,6 +62,20 @@ const MoodTracker = () => {
               placeholder="What shaped this feeling today?"
               required
             />
+          </label>
+          <label className="mt-5 flex cursor-pointer items-start gap-3 rounded-2xl bg-mist p-4 text-sm text-ink/72">
+            <input
+              type="checkbox"
+              checked={allowAIReflection}
+              onChange={(event) => setAllowAIReflection(event.target.checked)}
+              className="mt-1 h-4 w-4 accent-ink"
+            />
+            <span>
+              <span className="block font-black text-ink">Include this entry in AI reflections</span>
+              <span className="mt-1 block leading-6">
+                MoodMirror only uses entries you explicitly choose for weekly AI reflections.
+              </span>
+            </span>
           </label>
           <button className="btn-primary mt-6 w-full" disabled={loading}>
             {loading ? "Saving..." : "Save mood entry"}

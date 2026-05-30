@@ -32,6 +32,11 @@ const Entries = () => {
     setEntries((current) => current.map((item) => (item._id === entry._id ? data.entry : item)));
   };
 
+  const handleAIConsent = async (entry) => {
+    const { data } = await api.patch(`/mood/${entry._id}`, { allowAIReflection: !entry.allowAIReflection });
+    setEntries((current) => current.map((item) => (item._id === entry._id ? data.entry : item)));
+  };
+
   return (
     <section className="page-container py-10">
       <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
@@ -51,7 +56,13 @@ const Entries = () => {
       )}
       <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {entries.map((entry) => (
-          <MoodCard key={entry._id} entry={entry} onDelete={handleDelete} onFavorite={handleFavorite} />
+          <MoodCard
+            key={entry._id}
+            entry={entry}
+            onDelete={handleDelete}
+            onFavorite={handleFavorite}
+            onAIConsent={handleAIConsent}
+          />
         ))}
       </div>
     </section>

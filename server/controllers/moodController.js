@@ -10,7 +10,7 @@ const moodScores = {
 
 export const createMoodEntry = async (req, res) => {
   try {
-    const { mood, journal } = req.body;
+    const { mood, journal, allowAIReflection } = req.body;
 
     if (!mood || !journal) {
       return res.status(400).json({ message: "Mood and journal reflection are required" });
@@ -24,7 +24,8 @@ export const createMoodEntry = async (req, res) => {
       userId: req.user._id,
       mood,
       moodScore: moodScores[mood],
-      journal
+      journal,
+      allowAIReflection: Boolean(allowAIReflection)
     });
 
     return res.status(201).json({ entry });
@@ -62,6 +63,10 @@ export const updateMoodEntry = async (req, res) => {
 
     if (typeof req.body.isFavorite === "boolean") {
       allowedUpdates.isFavorite = req.body.isFavorite;
+    }
+
+    if (typeof req.body.allowAIReflection === "boolean") {
+      allowedUpdates.allowAIReflection = req.body.allowAIReflection;
     }
 
     if (req.body.journal) {

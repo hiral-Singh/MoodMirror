@@ -28,6 +28,10 @@ const moodEntrySchema = new mongoose.Schema(
     isFavorite: {
       type: Boolean,
       default: false
+    },
+    allowAIReflection: {
+      type: Boolean,
+      default: false
     }
   },
   { timestamps: true }
