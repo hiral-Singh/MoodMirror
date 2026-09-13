@@ -1,0 +1,667 @@
+{
+  "dataset": {
+    "path": "D:\\Project\\moodMirror\\ml\\data\\data.csv",
+    "rows": 1473,
+    "labels": [
+      "afraid",
+      "angry",
+      "anxious",
+      "ashamed",
+      "awkward",
+      "bored",
+      "calm",
+      "confused",
+      "disgusted",
+      "excited",
+      "frustrated",
+      "happy",
+      "jealous",
+      "nostalgic",
+      "proud",
+      "sad",
+      "satisfied",
+      "surprised"
+    ]
+  },
+  "split": {
+    "method": "MultilabelStratifiedShuffleSplit(iterative stratification)",
+    "random_seed": 42,
+    "test_size": 0.2,
+    "train_rows": 1166,
+    "test_rows": 307,
+    "train_label_support": {
+      "afraid": 14,
+      "angry": 22,
+      "anxious": 100,
+      "ashamed": 14,
+      "awkward": 12,
+      "bored": 39,
+      "calm": 294,
+      "confused": 22,
+      "disgusted": 18,
+      "excited": 201,
+      "frustrated": 113,
+      "happy": 584,
+      "jealous": 2,
+      "nostalgic": 49,
+      "proud": 270,
+      "sad": 34,
+      "satisfied": 473,
+      "surprised": 51
+    },
+    "test_label_support": {
+      "afraid": 4,
+      "angry": 6,
+      "anxious": 25,
+      "ashamed": 3,
+      "awkward": 3,
+      "bored": 10,
+      "calm": 74,
+      "confused": 6,
+      "disgusted": 4,
+      "excited": 50,
+      "frustrated": 28,
+      "happy": 146,
+      "jealous": 1,
+      "nostalgic": 12,
+      "proud": 67,
+      "sad": 9,
+      "satisfied": 118,
+      "surprised": 13
+    }
+  },
+  "tfidf": {
+    "lowercase": true,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 20000,
+    "stop_words": null,
+    "sublinear_tf": true,
+    "vocabulary_size": 5589
+  },
+  "logistic_regression": [
+    {
+      "name": "One-vs-Rest Logistic Regression",
+      "threshold_analysis": [
+        {
+          "threshold": 0.3,
+          "micro_f1": 0.4862,
+          "macro_f1": 0.1138,
+          "weighted_f1": 0.381,
+          "precision_micro": 0.4465,
+          "recall_micro": 0.5337,
+          "hamming_loss": 0.1182,
+          "exact_match_accuracy": 0.0684
+        },
+        {
+          "threshold": 0.4,
+          "micro_f1": 0.4451,
+          "macro_f1": 0.0944,
+          "weighted_f1": 0.338,
+          "precision_micro": 0.5272,
+          "recall_micro": 0.3851,
+          "hamming_loss": 0.1006,
+          "exact_match_accuracy": 0.1238
+        },
+        {
+          "threshold": 0.5,
+          "micro_f1": 0.3166,
+          "macro_f1": 0.0596,
+          "weighted_f1": 0.2381,
+          "precision_micro": 0.6212,
+          "recall_micro": 0.2124,
+          "hamming_loss": 0.0961,
+          "exact_match_accuracy": 0.114
+        },
+        {
+          "threshold": 0.6,
+          "micro_f1": 0.1626,
+          "macro_f1": 0.031,
+          "weighted_f1": 0.1329,
+          "precision_micro": 0.726,
+          "recall_micro": 0.0915,
+          "hamming_loss": 0.0988,
+          "exact_match_accuracy": 0.0684
+        },
+        {
+          "threshold": 0.7,
+          "micro_f1": 0.0469,
+          "macro_f1": 0.0098,
+          "weighted_f1": 0.0436,
+          "precision_micro": 0.7778,
+          "recall_micro": 0.0242,
+          "hamming_loss": 0.103,
+          "exact_match_accuracy": 0.0195
+        }
+      ],
+      "selected_threshold": 0.3,
+      "selected_metrics": {
+        "threshold": 0.3,
+        "micro_f1": 0.4862,
+        "macro_f1": 0.1138,
+        "weighted_f1": 0.381,
+        "precision_micro": 0.4465,
+        "recall_micro": 0.5337,
+        "hamming_loss": 0.1182,
+        "exact_match_accuracy": 0.0684
+      },
+      "per_label_metrics": [
+        {
+          "emotion": "afraid",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        {
+          "emotion": "angry",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        },
+        {
+          "emotion": "anxious",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 25
+        },
+        {
+          "emotion": "ashamed",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        {
+          "emotion": "awkward",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        {
+          "emotion": "bored",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        {
+          "emotion": "calm",
+          "precision": 0.4026,
+          "recall": 0.4189,
+          "f1": 0.4106,
+          "support": 74
+        },
+        {
+          "emotion": "confused",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        },
+        {
+          "emotion": "disgusted",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        {
+          "emotion": "excited",
+          "precision": 1.0,
+          "recall": 0.02,
+          "f1": 0.0392,
+          "support": 50
+        },
+        {
+          "emotion": "frustrated",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 28
+        },
+        {
+          "emotion": "happy",
+          "precision": 0.5017,
+          "recall": 0.9932,
+          "f1": 0.6667,
+          "support": 146
+        },
+        {
+          "emotion": "jealous",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        {
+          "emotion": "nostalgic",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 12
+        },
+        {
+          "emotion": "proud",
+          "precision": 0.4667,
+          "recall": 0.3134,
+          "f1": 0.375,
+          "support": 67
+        },
+        {
+          "emotion": "sad",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 9
+        },
+        {
+          "emotion": "satisfied",
+          "precision": 0.3964,
+          "recall": 0.9407,
+          "f1": 0.5578,
+          "support": 118
+        },
+        {
+          "emotion": "surprised",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 13
+        }
+      ],
+      "rare_label_macro_f1": 0.0,
+      "_probabilities_shape": [
+        307,
+        18
+      ]
+    },
+    {
+      "name": "One-vs-Rest Logistic Regression class_weight=\"balanced\"",
+      "threshold_analysis": [
+        {
+          "threshold": 0.3,
+          "micro_f1": 0.425,
+          "macro_f1": 0.2441,
+          "weighted_f1": 0.4554,
+          "precision_micro": 0.2777,
+          "recall_micro": 0.905,
+          "hamming_loss": 0.2566,
+          "exact_match_accuracy": 0.0033
+        },
+        {
+          "threshold": 0.4,
+          "micro_f1": 0.4805,
+          "macro_f1": 0.2527,
+          "weighted_f1": 0.4757,
+          "precision_micro": 0.3571,
+          "recall_micro": 0.734,
+          "hamming_loss": 0.1663,
+          "exact_match_accuracy": 0.0163
+        },
+        {
+          "threshold": 0.5,
+          "micro_f1": 0.4585,
+          "macro_f1": 0.206,
+          "weighted_f1": 0.4377,
+          "precision_micro": 0.4742,
+          "recall_micro": 0.4439,
+          "hamming_loss": 0.1098,
+          "exact_match_accuracy": 0.0619
+        },
+        {
+          "threshold": 0.6,
+          "micro_f1": 0.2827,
+          "macro_f1": 0.1177,
+          "weighted_f1": 0.2691,
+          "precision_micro": 0.6199,
+          "recall_micro": 0.1831,
+          "hamming_loss": 0.0974,
+          "exact_match_accuracy": 0.0912
+        },
+        {
+          "threshold": 0.7,
+          "micro_f1": 0.0822,
+          "macro_f1": 0.0309,
+          "weighted_f1": 0.0797,
+          "precision_micro": 0.8621,
+          "recall_micro": 0.0432,
+          "hamming_loss": 0.101,
+          "exact_match_accuracy": 0.0358
+        }
+      ],
+      "selected_threshold": 0.4,
+      "selected_metrics": {
+        "threshold": 0.4,
+        "micro_f1": 0.4805,
+        "macro_f1": 0.2527,
+        "weighted_f1": 0.4757,
+        "precision_micro": 0.3571,
+        "recall_micro": 0.734,
+        "hamming_loss": 0.1663,
+        "exact_match_accuracy": 0.0163
+      },
+      "per_label_metrics": [
+        {
+          "emotion": "afraid",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        {
+          "emotion": "angry",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        },
+        {
+          "emotion": "anxious",
+          "precision": 0.28,
+          "recall": 0.56,
+          "f1": 0.3733,
+          "support": 25
+        },
+        {
+          "emotion": "ashamed",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        {
+          "emotion": "awkward",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        {
+          "emotion": "bored",
+          "precision": 0.5385,
+          "recall": 0.7,
+          "f1": 0.6087,
+          "support": 10
+        },
+        {
+          "emotion": "calm",
+          "precision": 0.3085,
+          "recall": 0.8378,
+          "f1": 0.4509,
+          "support": 74
+        },
+        {
+          "emotion": "confused",
+          "precision": 0.5,
+          "recall": 0.1667,
+          "f1": 0.25,
+          "support": 6
+        },
+        {
+          "emotion": "disgusted",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        {
+          "emotion": "excited",
+          "precision": 0.2194,
+          "recall": 0.68,
+          "f1": 0.3317,
+          "support": 50
+        },
+        {
+          "emotion": "frustrated",
+          "precision": 0.3167,
+          "recall": 0.6786,
+          "f1": 0.4318,
+          "support": 28
+        },
+        {
+          "emotion": "happy",
+          "precision": 0.5462,
+          "recall": 0.8904,
+          "f1": 0.6771,
+          "support": 146
+        },
+        {
+          "emotion": "jealous",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        {
+          "emotion": "nostalgic",
+          "precision": 0.2857,
+          "recall": 0.3333,
+          "f1": 0.3077,
+          "support": 12
+        },
+        {
+          "emotion": "proud",
+          "precision": 0.2717,
+          "recall": 0.7015,
+          "f1": 0.3917,
+          "support": 67
+        },
+        {
+          "emotion": "sad",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 9
+        },
+        {
+          "emotion": "satisfied",
+          "precision": 0.4047,
+          "recall": 0.8814,
+          "f1": 0.5547,
+          "support": 118
+        },
+        {
+          "emotion": "surprised",
+          "precision": 0.1364,
+          "recall": 0.2308,
+          "f1": 0.1714,
+          "support": 13
+        }
+      ],
+      "rare_label_macro_f1": 0.0,
+      "_probabilities_shape": [
+        307,
+        18
+      ]
+    }
+  ],
+  "linear_svm": {
+    "name": "One-vs-Rest Linear SVM",
+    "metrics": {
+      "micro_f1": 0.4114,
+      "macro_f1": 0.1277,
+      "weighted_f1": 0.362,
+      "precision_micro": 0.5667,
+      "recall_micro": 0.323,
+      "hamming_loss": 0.0968,
+      "exact_match_accuracy": 0.1107
+    },
+    "per_label_metrics": [
+      {
+        "emotion": "afraid",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      {
+        "emotion": "angry",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      {
+        "emotion": "anxious",
+        "precision": 0.6667,
+        "recall": 0.08,
+        "f1": 0.1429,
+        "support": 25
+      },
+      {
+        "emotion": "ashamed",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 3
+      },
+      {
+        "emotion": "awkward",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 3
+      },
+      {
+        "emotion": "bored",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 10
+      },
+      {
+        "emotion": "calm",
+        "precision": 0.375,
+        "recall": 0.1622,
+        "f1": 0.2264,
+        "support": 74
+      },
+      {
+        "emotion": "confused",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      {
+        "emotion": "disgusted",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      {
+        "emotion": "excited",
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1": 0.1667,
+        "support": 50
+      },
+      {
+        "emotion": "frustrated",
+        "precision": 1.0,
+        "recall": 0.1786,
+        "f1": 0.303,
+        "support": 28
+      },
+      {
+        "emotion": "happy",
+        "precision": 0.6376,
+        "recall": 0.6507,
+        "f1": 0.6441,
+        "support": 146
+      },
+      {
+        "emotion": "jealous",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      {
+        "emotion": "nostalgic",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12
+      },
+      {
+        "emotion": "proud",
+        "precision": 0.5667,
+        "recall": 0.2537,
+        "f1": 0.3505,
+        "support": 67
+      },
+      {
+        "emotion": "sad",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9
+      },
+      {
+        "emotion": "satisfied",
+        "precision": 0.505,
+        "recall": 0.4322,
+        "f1": 0.4658,
+        "support": 118
+      },
+      {
+        "emotion": "surprised",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 13
+      }
+    ],
+    "rare_label_macro_f1": 0.0
+  },
+  "model_selection": {
+    "criterion": "0.50 * macro_f1 + 0.35 * micro_f1 + 0.15 * rare_label_macro_f1",
+    "best": {
+      "model_family": "logistic_regression",
+      "name": "One-vs-Rest Logistic Regression class_weight=\"balanced\"",
+      "threshold": 0.4,
+      "macro_f1": 0.2527,
+      "micro_f1": 0.4805,
+      "rare_label_macro_f1": 0.0,
+      "selection_score": 0.2945,
+      "all_candidates": [
+        {
+          "model_family": "logistic_regression",
+          "name": "One-vs-Rest Logistic Regression",
+          "threshold": 0.3,
+          "macro_f1": 0.1138,
+          "micro_f1": 0.4862,
+          "rare_label_macro_f1": 0.0,
+          "selection_score": 0.2271
+        },
+        {
+          "model_family": "logistic_regression",
+          "name": "One-vs-Rest Logistic Regression class_weight=\"balanced\"",
+          "threshold": 0.4,
+          "macro_f1": 0.2527,
+          "micro_f1": 0.4805,
+          "rare_label_macro_f1": 0.0,
+          "selection_score": 0.2945
+        },
+        {
+          "model_family": "linear_svm",
+          "name": "One-vs-Rest Linear SVM",
+          "threshold": null,
+          "macro_f1": 0.1277,
+          "micro_f1": 0.4114,
+          "rare_label_macro_f1": 0.0,
+          "selection_score": 0.2078
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,17 @@
-node_modules
+node_modules/
 .env
-dist
-build
-.vite
-coverage
+dist/
+build/
+.vite/
+coverage/
+
+# Python
+ml/.venv/
+ml/.ven/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# VS Code
+.vscode/

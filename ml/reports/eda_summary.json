@@ -1,0 +1,1180 @@
+{
+  "dataset": {
+    "path": "D:\\Project\\moodMirror\\ml\\data\\data.csv",
+    "rows": 1473,
+    "columns": 30,
+    "columnNames": [
+      "Answer",
+      "Answer.f1.afraid.raw",
+      "Answer.f1.angry.raw",
+      "Answer.f1.anxious.raw",
+      "Answer.f1.ashamed.raw",
+      "Answer.f1.awkward.raw",
+      "Answer.f1.bored.raw",
+      "Answer.f1.calm.raw",
+      "Answer.f1.confused.raw",
+      "Answer.f1.disgusted.raw",
+      "Answer.f1.excited.raw",
+      "Answer.f1.frustrated.raw",
+      "Answer.f1.happy.raw",
+      "Answer.f1.jealous.raw",
+      "Answer.f1.nostalgic.raw",
+      "Answer.f1.proud.raw",
+      "Answer.f1.sad.raw",
+      "Answer.f1.satisfied.raw",
+      "Answer.f1.surprised.raw",
+      "Answer.t1.exercise.raw",
+      "Answer.t1.family.raw",
+      "Answer.t1.food.raw",
+      "Answer.t1.friends.raw",
+      "Answer.t1.god.raw",
+      "Answer.t1.health.raw",
+      "Answer.t1.love.raw",
+      "Answer.t1.recreation.raw",
+      "Answer.t1.school.raw",
+      "Answer.t1.sleep.raw",
+      "Answer.t1.work.raw"
+    ],
+    "inferredDataTypes": {
+      "Answer": "text/string",
+      "Answer.f1.afraid.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.angry.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.anxious.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.ashamed.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.awkward.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.bored.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.calm.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.confused.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.disgusted.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.excited.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.frustrated.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.happy.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.jealous.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.nostalgic.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.proud.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.sad.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.satisfied.raw": "boolean string TRUE/FALSE",
+      "Answer.f1.surprised.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.exercise.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.family.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.food.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.friends.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.god.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.health.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.love.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.recreation.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.school.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.sleep.raw": "boolean string TRUE/FALSE",
+      "Answer.t1.work.raw": "boolean string TRUE/FALSE"
+    }
+  },
+  "dataQuality": {
+    "missingByColumn": {
+      "Answer": 0,
+      "Answer.f1.afraid.raw": 0,
+      "Answer.f1.angry.raw": 0,
+      "Answer.f1.anxious.raw": 0,
+      "Answer.f1.ashamed.raw": 0,
+      "Answer.f1.awkward.raw": 0,
+      "Answer.f1.bored.raw": 0,
+      "Answer.f1.calm.raw": 0,
+      "Answer.f1.confused.raw": 0,
+      "Answer.f1.disgusted.raw": 0,
+      "Answer.f1.excited.raw": 0,
+      "Answer.f1.frustrated.raw": 0,
+      "Answer.f1.happy.raw": 0,
+      "Answer.f1.jealous.raw": 0,
+      "Answer.f1.nostalgic.raw": 0,
+      "Answer.f1.proud.raw": 0,
+      "Answer.f1.sad.raw": 0,
+      "Answer.f1.satisfied.raw": 0,
+      "Answer.f1.surprised.raw": 0,
+      "Answer.t1.exercise.raw": 0,
+      "Answer.t1.family.raw": 0,
+      "Answer.t1.food.raw": 0,
+      "Answer.t1.friends.raw": 0,
+      "Answer.t1.god.raw": 0,
+      "Answer.t1.health.raw": 0,
+      "Answer.t1.love.raw": 0,
+      "Answer.t1.recreation.raw": 0,
+      "Answer.t1.school.raw": 0,
+      "Answer.t1.sleep.raw": 0,
+      "Answer.t1.work.raw": 0
+    },
+    "duplicateRows": 0,
+    "duplicateJournalTexts": 0,
+    "emptyJournalEntries": 0,
+    "invalidBooleanValues": {}
+  },
+  "textStats": {
+    "characters": {
+      "min": 15,
+      "max": 1162,
+      "mean": 169.2,
+      "median": 146,
+      "p90": 303,
+      "p95": 361,
+      "p99": 568.56,
+      "std": 111.47
+    },
+    "words": {
+      "min": 4,
+      "max": 223,
+      "mean": 33.53,
+      "median": 29,
+      "p90": 60,
+      "p95": 72,
+      "p99": 111,
+      "std": 21.7
+    },
+    "veryShortUnder50Chars": 86,
+    "veryShortUnder20Words": 388,
+    "unusuallyLongOverP95Chars": 73,
+    "unusuallyLongOver1000Chars": 1,
+    "characterBuckets": [
+      {
+        "bucket": "0-99",
+        "count": 405
+      },
+      {
+        "bucket": "100-249",
+        "count": 816
+      },
+      {
+        "bucket": "250-499",
+        "count": 227
+      },
+      {
+        "bucket": "500-749",
+        "count": 22
+      },
+      {
+        "bucket": "750-999",
+        "count": 2
+      },
+      {
+        "bucket": "1000+",
+        "count": 1
+      }
+    ],
+    "wordBuckets": [
+      {
+        "bucket": "0-24",
+        "count": 572
+      },
+      {
+        "bucket": "25-49",
+        "count": 644
+      },
+      {
+        "bucket": "50-99",
+        "count": 234
+      },
+      {
+        "bucket": "100-149",
+        "count": 20
+      },
+      {
+        "bucket": "150-199",
+        "count": 2
+      },
+      {
+        "bucket": "200+",
+        "count": 1
+      }
+    ]
+  },
+  "emotions": {
+    "summary": [
+      {
+        "label": "happy",
+        "column": "Answer.f1.happy.raw",
+        "positive": 730,
+        "negative": 743,
+        "percentage": 49.56
+      },
+      {
+        "label": "satisfied",
+        "column": "Answer.f1.satisfied.raw",
+        "positive": 591,
+        "negative": 882,
+        "percentage": 40.12
+      },
+      {
+        "label": "calm",
+        "column": "Answer.f1.calm.raw",
+        "positive": 368,
+        "negative": 1105,
+        "percentage": 24.98
+      },
+      {
+        "label": "proud",
+        "column": "Answer.f1.proud.raw",
+        "positive": 337,
+        "negative": 1136,
+        "percentage": 22.88
+      },
+      {
+        "label": "excited",
+        "column": "Answer.f1.excited.raw",
+        "positive": 251,
+        "negative": 1222,
+        "percentage": 17.04
+      },
+      {
+        "label": "frustrated",
+        "column": "Answer.f1.frustrated.raw",
+        "positive": 141,
+        "negative": 1332,
+        "percentage": 9.57
+      },
+      {
+        "label": "anxious",
+        "column": "Answer.f1.anxious.raw",
+        "positive": 125,
+        "negative": 1348,
+        "percentage": 8.49
+      },
+      {
+        "label": "surprised",
+        "column": "Answer.f1.surprised.raw",
+        "positive": 64,
+        "negative": 1409,
+        "percentage": 4.34
+      },
+      {
+        "label": "nostalgic",
+        "column": "Answer.f1.nostalgic.raw",
+        "positive": 61,
+        "negative": 1412,
+        "percentage": 4.14
+      },
+      {
+        "label": "bored",
+        "column": "Answer.f1.bored.raw",
+        "positive": 49,
+        "negative": 1424,
+        "percentage": 3.33
+      },
+      {
+        "label": "sad",
+        "column": "Answer.f1.sad.raw",
+        "positive": 43,
+        "negative": 1430,
+        "percentage": 2.92
+      },
+      {
+        "label": "angry",
+        "column": "Answer.f1.angry.raw",
+        "positive": 28,
+        "negative": 1445,
+        "percentage": 1.9
+      },
+      {
+        "label": "confused",
+        "column": "Answer.f1.confused.raw",
+        "positive": 28,
+        "negative": 1445,
+        "percentage": 1.9
+      },
+      {
+        "label": "disgusted",
+        "column": "Answer.f1.disgusted.raw",
+        "positive": 22,
+        "negative": 1451,
+        "percentage": 1.49
+      },
+      {
+        "label": "afraid",
+        "column": "Answer.f1.afraid.raw",
+        "positive": 18,
+        "negative": 1455,
+        "percentage": 1.22
+      },
+      {
+        "label": "ashamed",
+        "column": "Answer.f1.ashamed.raw",
+        "positive": 17,
+        "negative": 1456,
+        "percentage": 1.15
+      },
+      {
+        "label": "awkward",
+        "column": "Answer.f1.awkward.raw",
+        "positive": 15,
+        "negative": 1458,
+        "percentage": 1.02
+      },
+      {
+        "label": "jealous",
+        "column": "Answer.f1.jealous.raw",
+        "positive": 3,
+        "negative": 1470,
+        "percentage": 0.2
+      }
+    ],
+    "mostCommon": [
+      {
+        "label": "happy",
+        "column": "Answer.f1.happy.raw",
+        "positive": 730,
+        "negative": 743,
+        "percentage": 49.56
+      },
+      {
+        "label": "satisfied",
+        "column": "Answer.f1.satisfied.raw",
+        "positive": 591,
+        "negative": 882,
+        "percentage": 40.12
+      },
+      {
+        "label": "calm",
+        "column": "Answer.f1.calm.raw",
+        "positive": 368,
+        "negative": 1105,
+        "percentage": 24.98
+      },
+      {
+        "label": "proud",
+        "column": "Answer.f1.proud.raw",
+        "positive": 337,
+        "negative": 1136,
+        "percentage": 22.88
+      },
+      {
+        "label": "excited",
+        "column": "Answer.f1.excited.raw",
+        "positive": 251,
+        "negative": 1222,
+        "percentage": 17.04
+      }
+    ],
+    "rarest": [
+      {
+        "label": "jealous",
+        "column": "Answer.f1.jealous.raw",
+        "positive": 3,
+        "negative": 1470,
+        "percentage": 0.2
+      },
+      {
+        "label": "awkward",
+        "column": "Answer.f1.awkward.raw",
+        "positive": 15,
+        "negative": 1458,
+        "percentage": 1.02
+      },
+      {
+        "label": "ashamed",
+        "column": "Answer.f1.ashamed.raw",
+        "positive": 17,
+        "negative": 1456,
+        "percentage": 1.15
+      },
+      {
+        "label": "afraid",
+        "column": "Answer.f1.afraid.raw",
+        "positive": 18,
+        "negative": 1455,
+        "percentage": 1.22
+      },
+      {
+        "label": "disgusted",
+        "column": "Answer.f1.disgusted.raw",
+        "positive": 22,
+        "negative": 1451,
+        "percentage": 1.49
+      }
+    ],
+    "labelCount": {
+      "average": 1.96,
+      "min": 1,
+      "max": 7,
+      "distribution": {
+        "1": 609,
+        "2": 382,
+        "3": 429,
+        "4": 41,
+        "5": 6,
+        "6": 5,
+        "7": 1
+      }
+    },
+    "cooccurrenceTop20": [
+      {
+        "pair": "happy + satisfied",
+        "count": 315,
+        "percentage": 21.38
+      },
+      {
+        "pair": "calm + happy",
+        "count": 182,
+        "percentage": 12.36
+      },
+      {
+        "pair": "happy + proud",
+        "count": 178,
+        "percentage": 12.08
+      },
+      {
+        "pair": "excited + happy",
+        "count": 172,
+        "percentage": 11.68
+      },
+      {
+        "pair": "calm + satisfied",
+        "count": 162,
+        "percentage": 11
+      },
+      {
+        "pair": "proud + satisfied",
+        "count": 146,
+        "percentage": 9.91
+      },
+      {
+        "pair": "excited + satisfied",
+        "count": 93,
+        "percentage": 6.31
+      },
+      {
+        "pair": "excited + proud",
+        "count": 87,
+        "percentage": 5.91
+      },
+      {
+        "pair": "calm + proud",
+        "count": 56,
+        "percentage": 3.8
+      },
+      {
+        "pair": "anxious + frustrated",
+        "count": 53,
+        "percentage": 3.6
+      },
+      {
+        "pair": "happy + nostalgic",
+        "count": 45,
+        "percentage": 3.05
+      },
+      {
+        "pair": "calm + excited",
+        "count": 35,
+        "percentage": 2.38
+      },
+      {
+        "pair": "happy + surprised",
+        "count": 34,
+        "percentage": 2.31
+      },
+      {
+        "pair": "nostalgic + satisfied",
+        "count": 21,
+        "percentage": 1.43
+      },
+      {
+        "pair": "bored + frustrated",
+        "count": 20,
+        "percentage": 1.36
+      },
+      {
+        "pair": "satisfied + surprised",
+        "count": 18,
+        "percentage": 1.22
+      },
+      {
+        "pair": "anxious + sad",
+        "count": 17,
+        "percentage": 1.15
+      },
+      {
+        "pair": "frustrated + sad",
+        "count": 17,
+        "percentage": 1.15
+      },
+      {
+        "pair": "angry + frustrated",
+        "count": 16,
+        "percentage": 1.09
+      },
+      {
+        "pair": "confused + frustrated",
+        "count": 16,
+        "percentage": 1.09
+      }
+    ]
+  },
+  "topics": {
+    "summary": [
+      {
+        "label": "family",
+        "column": "Answer.t1.family.raw",
+        "positive": 275,
+        "negative": 1198,
+        "percentage": 18.67
+      },
+      {
+        "label": "work",
+        "column": "Answer.t1.work.raw",
+        "positive": 235,
+        "negative": 1238,
+        "percentage": 15.95
+      },
+      {
+        "label": "food",
+        "column": "Answer.t1.food.raw",
+        "positive": 203,
+        "negative": 1270,
+        "percentage": 13.78
+      },
+      {
+        "label": "exercise",
+        "column": "Answer.t1.exercise.raw",
+        "positive": 185,
+        "negative": 1288,
+        "percentage": 12.56
+      },
+      {
+        "label": "sleep",
+        "column": "Answer.t1.sleep.raw",
+        "positive": 132,
+        "negative": 1341,
+        "percentage": 8.96
+      },
+      {
+        "label": "friends",
+        "column": "Answer.t1.friends.raw",
+        "positive": 100,
+        "negative": 1373,
+        "percentage": 6.79
+      },
+      {
+        "label": "health",
+        "column": "Answer.t1.health.raw",
+        "positive": 99,
+        "negative": 1374,
+        "percentage": 6.72
+      },
+      {
+        "label": "recreation",
+        "column": "Answer.t1.recreation.raw",
+        "positive": 89,
+        "negative": 1384,
+        "percentage": 6.04
+      },
+      {
+        "label": "god",
+        "column": "Answer.t1.god.raw",
+        "positive": 67,
+        "negative": 1406,
+        "percentage": 4.55
+      },
+      {
+        "label": "love",
+        "column": "Answer.t1.love.raw",
+        "positive": 67,
+        "negative": 1406,
+        "percentage": 4.55
+      },
+      {
+        "label": "school",
+        "column": "Answer.t1.school.raw",
+        "positive": 19,
+        "negative": 1454,
+        "percentage": 1.29
+      }
+    ],
+    "mostCommon": [
+      {
+        "label": "family",
+        "column": "Answer.t1.family.raw",
+        "positive": 275,
+        "negative": 1198,
+        "percentage": 18.67
+      },
+      {
+        "label": "work",
+        "column": "Answer.t1.work.raw",
+        "positive": 235,
+        "negative": 1238,
+        "percentage": 15.95
+      },
+      {
+        "label": "food",
+        "column": "Answer.t1.food.raw",
+        "positive": 203,
+        "negative": 1270,
+        "percentage": 13.78
+      },
+      {
+        "label": "exercise",
+        "column": "Answer.t1.exercise.raw",
+        "positive": 185,
+        "negative": 1288,
+        "percentage": 12.56
+      },
+      {
+        "label": "sleep",
+        "column": "Answer.t1.sleep.raw",
+        "positive": 132,
+        "negative": 1341,
+        "percentage": 8.96
+      }
+    ],
+    "rarest": [
+      {
+        "label": "school",
+        "column": "Answer.t1.school.raw",
+        "positive": 19,
+        "negative": 1454,
+        "percentage": 1.29
+      },
+      {
+        "label": "god",
+        "column": "Answer.t1.god.raw",
+        "positive": 67,
+        "negative": 1406,
+        "percentage": 4.55
+      },
+      {
+        "label": "love",
+        "column": "Answer.t1.love.raw",
+        "positive": 67,
+        "negative": 1406,
+        "percentage": 4.55
+      },
+      {
+        "label": "recreation",
+        "column": "Answer.t1.recreation.raw",
+        "positive": 89,
+        "negative": 1384,
+        "percentage": 6.04
+      },
+      {
+        "label": "health",
+        "column": "Answer.t1.health.raw",
+        "positive": 99,
+        "negative": 1374,
+        "percentage": 6.72
+      }
+    ],
+    "labelCount": {
+      "average": 1,
+      "min": 0,
+      "max": 1,
+      "distribution": {
+        "0": 2,
+        "1": 1471
+      }
+    },
+    "cooccurrenceTop20": []
+  },
+  "emotionTopicRelationships": [
+    {
+      "topic": "family",
+      "topicCount": 275,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "jealous",
+          "positive": 1,
+          "rate": 0.36,
+          "lift": 1.79
+        },
+        {
+          "emotion": "nostalgic",
+          "positive": 19,
+          "rate": 6.91,
+          "lift": 1.67
+        },
+        {
+          "emotion": "sad",
+          "positive": 13,
+          "rate": 4.73,
+          "lift": 1.62
+        },
+        {
+          "emotion": "happy",
+          "positive": 202,
+          "rate": 73.45,
+          "lift": 1.48
+        },
+        {
+          "emotion": "angry",
+          "positive": 7,
+          "rate": 2.55,
+          "lift": 1.34
+        }
+      ]
+    },
+    {
+      "topic": "work",
+      "topicCount": 235,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "bored",
+          "positive": 31,
+          "rate": 13.19,
+          "lift": 3.97
+        },
+        {
+          "emotion": "frustrated",
+          "positive": 56,
+          "rate": 23.83,
+          "lift": 2.49
+        },
+        {
+          "emotion": "anxious",
+          "positive": 48,
+          "rate": 20.43,
+          "lift": 2.41
+        },
+        {
+          "emotion": "angry",
+          "positive": 9,
+          "rate": 3.83,
+          "lift": 2.01
+        },
+        {
+          "emotion": "disgusted",
+          "positive": 6,
+          "rate": 2.55,
+          "lift": 1.71
+        }
+      ]
+    },
+    {
+      "topic": "food",
+      "topicCount": 203,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "ashamed",
+          "positive": 8,
+          "rate": 3.94,
+          "lift": 3.41
+        },
+        {
+          "emotion": "jealous",
+          "positive": 1,
+          "rate": 0.49,
+          "lift": 2.42
+        },
+        {
+          "emotion": "nostalgic",
+          "positive": 17,
+          "rate": 8.37,
+          "lift": 2.02
+        },
+        {
+          "emotion": "disgusted",
+          "positive": 5,
+          "rate": 2.46,
+          "lift": 1.65
+        },
+        {
+          "emotion": "excited",
+          "positive": 42,
+          "rate": 20.69,
+          "lift": 1.21
+        }
+      ]
+    },
+    {
+      "topic": "exercise",
+      "topicCount": 185,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "proud",
+          "positive": 81,
+          "rate": 43.78,
+          "lift": 1.91
+        },
+        {
+          "emotion": "excited",
+          "positive": 49,
+          "rate": 26.49,
+          "lift": 1.55
+        },
+        {
+          "emotion": "satisfied",
+          "positive": 101,
+          "rate": 54.59,
+          "lift": 1.36
+        },
+        {
+          "emotion": "ashamed",
+          "positive": 2,
+          "rate": 1.08,
+          "lift": 0.94
+        },
+        {
+          "emotion": "happy",
+          "positive": 83,
+          "rate": 44.86,
+          "lift": 0.91
+        }
+      ]
+    },
+    {
+      "topic": "sleep",
+      "topicCount": 132,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "awkward",
+          "positive": 3,
+          "rate": 2.27,
+          "lift": 2.23
+        },
+        {
+          "emotion": "calm",
+          "positive": 61,
+          "rate": 46.21,
+          "lift": 1.85
+        },
+        {
+          "emotion": "angry",
+          "positive": 4,
+          "rate": 3.03,
+          "lift": 1.59
+        },
+        {
+          "emotion": "confused",
+          "positive": 4,
+          "rate": 3.03,
+          "lift": 1.59
+        },
+        {
+          "emotion": "afraid",
+          "positive": 2,
+          "rate": 1.52,
+          "lift": 1.24
+        }
+      ]
+    },
+    {
+      "topic": "friends",
+      "topicCount": 100,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "jealous",
+          "positive": 1,
+          "rate": 1,
+          "lift": 4.91
+        },
+        {
+          "emotion": "nostalgic",
+          "positive": 14,
+          "rate": 14,
+          "lift": 3.38
+        },
+        {
+          "emotion": "awkward",
+          "positive": 3,
+          "rate": 3,
+          "lift": 2.95
+        },
+        {
+          "emotion": "surprised",
+          "positive": 9,
+          "rate": 9,
+          "lift": 2.07
+        },
+        {
+          "emotion": "ashamed",
+          "positive": 2,
+          "rate": 2,
+          "lift": 1.73
+        }
+      ]
+    },
+    {
+      "topic": "health",
+      "topicCount": 99,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "afraid",
+          "positive": 6,
+          "rate": 6.06,
+          "lift": 4.96
+        },
+        {
+          "emotion": "confused",
+          "positive": 7,
+          "rate": 7.07,
+          "lift": 3.72
+        },
+        {
+          "emotion": "disgusted",
+          "positive": 5,
+          "rate": 5.05,
+          "lift": 3.38
+        },
+        {
+          "emotion": "anxious",
+          "positive": 21,
+          "rate": 21.21,
+          "lift": 2.5
+        },
+        {
+          "emotion": "sad",
+          "positive": 7,
+          "rate": 7.07,
+          "lift": 2.42
+        }
+      ]
+    },
+    {
+      "topic": "recreation",
+      "topicCount": 89,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "excited",
+          "positive": 27,
+          "rate": 30.34,
+          "lift": 1.78
+        },
+        {
+          "emotion": "calm",
+          "positive": 37,
+          "rate": 41.57,
+          "lift": 1.66
+        },
+        {
+          "emotion": "bored",
+          "positive": 4,
+          "rate": 4.49,
+          "lift": 1.35
+        },
+        {
+          "emotion": "surprised",
+          "positive": 5,
+          "rate": 5.62,
+          "lift": 1.29
+        },
+        {
+          "emotion": "confused",
+          "positive": 2,
+          "rate": 2.25,
+          "lift": 1.18
+        }
+      ]
+    },
+    {
+      "topic": "god",
+      "topicCount": 67,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "calm",
+          "positive": 39,
+          "rate": 58.21,
+          "lift": 2.33
+        },
+        {
+          "emotion": "nostalgic",
+          "positive": 3,
+          "rate": 4.48,
+          "lift": 1.08
+        },
+        {
+          "emotion": "excited",
+          "positive": 12,
+          "rate": 17.91,
+          "lift": 1.05
+        },
+        {
+          "emotion": "happy",
+          "positive": 34,
+          "rate": 50.75,
+          "lift": 1.02
+        },
+        {
+          "emotion": "satisfied",
+          "positive": 27,
+          "rate": 40.3,
+          "lift": 1
+        }
+      ]
+    },
+    {
+      "topic": "love",
+      "topicCount": 67,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "excited",
+          "positive": 20,
+          "rate": 29.85,
+          "lift": 1.75
+        },
+        {
+          "emotion": "surprised",
+          "positive": 4,
+          "rate": 5.97,
+          "lift": 1.37
+        },
+        {
+          "emotion": "happy",
+          "positive": 45,
+          "rate": 67.16,
+          "lift": 1.36
+        },
+        {
+          "emotion": "satisfied",
+          "positive": 29,
+          "rate": 43.28,
+          "lift": 1.08
+        },
+        {
+          "emotion": "calm",
+          "positive": 17,
+          "rate": 25.37,
+          "lift": 1.02
+        }
+      ]
+    },
+    {
+      "topic": "school",
+      "topicCount": 19,
+      "strongestEmotionAssociations": [
+        {
+          "emotion": "bored",
+          "positive": 3,
+          "rate": 15.79,
+          "lift": 4.75
+        },
+        {
+          "emotion": "disgusted",
+          "positive": 1,
+          "rate": 5.26,
+          "lift": 3.52
+        },
+        {
+          "emotion": "anxious",
+          "positive": 4,
+          "rate": 21.05,
+          "lift": 2.48
+        },
+        {
+          "emotion": "surprised",
+          "positive": 2,
+          "rate": 10.53,
+          "lift": 2.42
+        },
+        {
+          "emotion": "proud",
+          "positive": 7,
+          "rate": 36.84,
+          "lift": 1.61
+        }
+      ]
+    }
+  ],
+  "labelQuality": {
+    "noEmotionCount": 0,
+    "noTopicCount": 2,
+    "manyEmotionThreshold": 5,
+    "manyEmotionCount": 12,
+    "manyTopicThreshold": 3,
+    "manyTopicCount": 0
+  },
+  "examples": {
+    "commonEmotions": {
+      "happy": [
+        "My family was the most salient part of my day, since most days the care of my 2 children occupies the majority of my time. They are 2 years old and 7 months and I love them, but they also require so much attention that m...",
+        "Yesterday, my family and I played a bunch of board games. My husband won most of them which is not surprising in the least. We played all sorts of games including Life, Clue, Mouse Trap and more. It was relaxing and such..."
+      ],
+      "satisfied": [
+        "Yesterday, my family and I played a bunch of board games. My husband won most of them which is not surprising in the least. We played all sorts of games including Life, Clue, Mouse Trap and more. It was relaxing and such...",
+        "Yesterday, I got a lot of things ready for listing, and fielded many questions from potential buyers. I also did some surveys on Mturk. Woke up this morning to find that there are quite a few items that now have bids and..."
+      ],
+      "calm": [
+        "Yoga keeps me focused. I am able to take some time for me and breath and work my body. This is important because it sets up my mood for the whole day.",
+        "Yesterday, my family and I played a bunch of board games. My husband won most of them which is not surprising in the least. We played all sorts of games including Life, Clue, Mouse Trap and more. It was relaxing and such..."
+      ]
+    },
+    "rareEmotions": {
+      "jealous": [
+        "My friend recently told me about a promotion he'd gotten. I was proud and happy for him, but I was also jealousy. I've been working on a promotion myself for a year now, and there's no sign it's coming any time soon.",
+        "Continued with the physiotherapy exercise after being pushed by my daughter. Great to have a daughter who care for me so much."
+      ],
+      "awkward": [
+        "I went to my MRI to find out about the spot on my pancreas.  I did not like it because I felt trapped in the machine.  When I got home I had a vertigo attack that I think was caused by being in the MRI for so long.",
+        "I was downtown, and bumped into an old friend of mine at a bus station.  We do not always get along so great, and he was in a bad mood, so we ended up taking a long bus ride together in mostly awkward silence."
+      ],
+      "ashamed": [
+        "I have been sleeping a lot lately. When I get home from work, I usually need to take a nap. It can last anywhere from an hour to three hours. It is really frustrating because I am getting enough sleep at night, so I feel...",
+        "I had parent teacher conferences for two of my children. One was excellent and is doing really well and my oldest, is doing well academically but is struggling in the classroom and socially. He receives a lot of help at..."
+      ]
+    },
+    "multiEmotionExamples": [
+      {
+        "emotions": [
+          "angry",
+          "anxious",
+          "bored",
+          "frustrated",
+          "sad"
+        ],
+        "topics": [
+          "work"
+        ],
+        "text": "Yesterday, I had to go to work. It was my first day back to work after my weekend, so I was pretty frustrated and sad. It was a pretty boring day overall.",
+        "emotionCount": 5
+      },
+      {
+        "emotions": [
+          "calm",
+          "excited",
+          "happy",
+          "nostalgic",
+          "proud",
+          "satisfied"
+        ],
+        "topics": [
+          "friends"
+        ],
+        "text": "We had friends surprise us with a visit. We haven't seen them over 2 years. We were all so excited! They are from Hawaii and it is snowing here so we got to play in the snow with them and build a snowman!",
+        "emotionCount": 6
+      },
+      {
+        "emotions": [
+          "excited",
+          "happy",
+          "proud",
+          "satisfied"
+        ],
+        "topics": [
+          "family"
+        ],
+        "text": "Upon picking up my only child from school, she gave me the amazing news, she was chosen to be in Honors quiet. Dad and I are so happy and proud of her. We dont know how we are going to squeeze in Choir rehearsals with he...",
+        "emotionCount": 4
+      },
+      {
+        "emotions": [
+          "excited",
+          "happy",
+          "proud",
+          "satisfied"
+        ],
+        "topics": [
+          "exercise"
+        ],
+        "text": "Today, I exercised and it honestly felt amazing.  The feeling after a good workout is hard to beat.",
+        "emotionCount": 4
+      },
+      {
+        "emotions": [
+          "calm",
+          "excited",
+          "happy",
+          "proud",
+          "satisfied",
+          "surprised"
+        ],
+        "topics": [
+          "food"
+        ],
+        "text": "My wife has 4th stage cancer and is going through chemo every 3 weeks.  In the 2nd week after the last chemo treatment she is her normal self and able  to cook.  So yesterday for dinner we had a good cooked meal that was...",
+        "emotionCount": 6
+      }
+    ]
+  }
+}
